@@ -6,3 +6,7 @@ img {
 .error {
     color: red
 }
+
+.field {
+    margin-bottom: 5px;
+}

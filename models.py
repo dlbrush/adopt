@@ -45,3 +45,15 @@ class Pet(db.Model):
         default = True,
         nullable = False
     )
+
+    @classmethod
+    def add(cls, name, species, photo_url, age, notes):
+        new_pet = cls(name=name, species=species, photo_url=photo_url, age=age, notes=notes)
+        db.session.add(new_pet)
+        db.session.commit()
+
+    def edit(self, photo_url, notes, available):
+        self.photo_url = photo_url
+        self.notes = notes
+        self.available = available
+        db.session.commit()
