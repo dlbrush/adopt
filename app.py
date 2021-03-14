@@ -35,7 +35,7 @@ def show_pet_add_form():
         species = form.species.data
         photo_url = form.photo_url.data
         age = form.age.data
-        notes = form.age.data
+        notes = form.notes.data
 
         Pet.add(name=name, species=species, photo_url=photo_url, age=age, notes=notes)
 
