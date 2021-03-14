@@ -10,7 +10,7 @@ All Pets
 <a href="/add"><button>Add new pet</button></a>
 
 {% for pet in pets %}
-    <h3>{{pet.name}}</h3>
+    <a href="/{{pet.id}}"><h3>{{pet.name}}</h3></a>
 
     {% if pet.photo_url %}
     <img src="{{pet.photo_url}}" alt="{{pet.name}}">

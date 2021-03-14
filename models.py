@@ -48,11 +48,17 @@ class Pet(db.Model):
 
     @classmethod
     def add(cls, name, species, photo_url, age, notes):
+        """
+        Add and commit a new pet to the database.
+        """
         new_pet = cls(name=name, species=species, photo_url=photo_url, age=age, notes=notes)
         db.session.add(new_pet)
         db.session.commit()
 
     def edit(self, photo_url, notes, available):
+        """
+        Handle any details of a pet that have been edited, and then commit to the database.
+        """
         self.photo_url = photo_url
         self.notes = notes
         self.available = available
